@@ -1,0 +1,17 @@
+//Given an array of integers, return a new array with each value doubled.
+
+//For example:
+
+//[1, 2, 3] --> [2, 4, 6]
+
+//Немного не понимал, но чат гпт предложил функцию 'push'
+
+function maps(x){
+  let result = [];                      //Создал переменную для сохранения результата
+  
+  for(let i = 0; i < x.length; i++){    //Создал цикл
+    result.push(x[i] * 2);              //Умножаю каждый символ и добавляю в массив
+  }
+  
+  return result;                        //вернул результат
+}
