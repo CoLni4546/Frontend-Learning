@@ -1,0 +1,4 @@
+function reverseList(list) { 
+    list.reverse();
+  return list;
+}
