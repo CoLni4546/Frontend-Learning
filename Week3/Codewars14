@@ -6,11 +6,17 @@
 
 
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
-  var fuel = mpg * fuelLeft      //умножил сколько проезжает машина в среднем и кол-во галлонов
-  if(fuel >= distanceToPump){    //если "fuel" больше получилось чем дистанция до заправки, то возращаем "true"
+  // ошибка 1: кривой нейминг (fuel -> range)
+  // ошибка 2: использование var (var -> let/const)
+  const range = mpg * fuelLeft
+  if(fuel >= distanceToPump){
     return true;    
   }
-  else {
-    return false;
-  }
+  // ошибка 3: использование лишнего else в ветвении функции
+  return false;
+
+  // не использовал тернарный оператор для ПРОСТОЙ задачи true/false
+
+  // правильное решение задачи ↓
+  // return mpg * fuelLeft >= distanceToPump;
 };
